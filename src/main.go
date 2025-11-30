@@ -85,7 +85,7 @@ func handleConnection(conn net.Conn) {
 			key, _ := commandParts[1].(string)
 			val, _ := commandParts[2].(string)
 
-			mu.Lock() 
+			mu.Lock()
 			store[key] = val
 			mu.Unlock()
 
@@ -98,7 +98,7 @@ func handleConnection(conn net.Conn) {
 			}
 			key, _ := commandParts[1].(string)
 
-			mu.RLock() 
+			mu.RLock()
 			val, exists := store[key]
 			mu.RUnlock()
 

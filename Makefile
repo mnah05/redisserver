@@ -1,4 +1,3 @@
-
 SRC := src/main.go
 BIN := bin/main
 
